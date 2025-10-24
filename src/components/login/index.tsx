@@ -18,7 +18,6 @@ import { styles } from "./styles";
 export function Login() {
     const router = useRouter();
 
-    // 👇 Pré-preenchidos (mantidos do seu exemplo)
     const [email, setEmail] = useState("aluno@teste.com");
     const [password, setPassword] = useState("123@senac");
 
@@ -26,7 +25,6 @@ export function Login() {
     const [loading, setLoading] = useState(false);
     const [loginError, setLoginError] = useState("");
 
-    // Mesmo critério que você já usava
     const canSubmit = email.trim() !== "" && password.trim() !== "" && !loading;
 
     const handleSignIn = async () => {
@@ -39,8 +37,7 @@ export function Login() {
 
             if (email.toLowerCase() === "aluno@teste.com" && password === "123@senac") {
                 console.log("Login simulado com sucesso!");
-                // Quando quiser, pode redirecionar:
-                // router.replace("/(tabs)");
+              
             } else {
                 setLoginError("E-mail ou senha inválidos!");
             }
