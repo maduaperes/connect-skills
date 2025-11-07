@@ -18,7 +18,7 @@ import { styles } from "./styles";
 
 export default function Register() {
     const router = useRouter();
-    const { signIn } = useAuth();
+    const { signIn, signUp } = useAuth(); // agora temos signUp também
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -43,12 +43,16 @@ export default function Register() {
         setLoading(true);
 
         try {
-            await new Promise((resolve) => setTimeout(resolve, 1500));
+            // Cadastrar usuário
+            await signUp(email, password);
+
+            // Fazer login automaticamente
             await signIn(email, password);
+
             Alert.alert("Sucesso", "Cadastro realizado!");
             router.push("/"); 
-        } catch (error) {
-            Alert.alert("Erro", "Não foi possível realizar o cadastro.");
+        } catch (error: any) {
+            Alert.alert("Erro", error.message || "Não foi possível realizar o cadastro.");
         } finally {
             setLoading(false);
         }
