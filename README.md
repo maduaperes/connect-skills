@@ -108,7 +108,7 @@ connect-skills/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/connect-skills.git
+git clone https://github.com/maduaperes/connect-skills.git
 ```
 
 Acesse a pasta do projeto:
@@ -157,7 +157,7 @@ EXPO_PUBLIC_SUPABASE_ANON_KEY=sua_chave
 
 # Autor
 
-Projeto desenvolvido para fins acadêmicos e aprendizado em desenvolvimento mobile.
+Projeto desenvolvido por Madu Peres para fins acadêmicos e aprendizado em desenvolvimento mobile.
 
 ---
 
