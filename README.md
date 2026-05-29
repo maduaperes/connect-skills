@@ -1,50 +1,166 @@
-# Welcome to your Expo app 👋
+# ConnectSkills
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O ConnectSkills é um aplicativo mobile desenvolvido para conectar pessoas através de habilidades, competências e networking profissional.  
+A plataforma permite que usuários criem contas, realizem login e compartilhem suas skills de forma prática e intuitiva.
 
-## Get started
+---
 
-1. Install dependencies
+# Objetivo
 
-   ```bash
-   npm install
-   ```
+O projeto tem como objetivo incentivar conexões profissionais e colaboração entre usuários, permitindo:
 
-2. Start the app
+- Compartilhar habilidades;
+- Criar networking;
+- Divulgar competências profissionais;
+- Facilitar conexões entre pessoas com interesses em comum.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+# Tecnologias Utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo Router
+- TypeScript
+- Supabase
+- Context API
+- Expo
+- ESLint
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+# Funcionalidades
 
-When you're ready, run:
+## Autenticação
+- Cadastro de usuários;
+- Login;
+- Gerenciamento de autenticação com Context API;
+- Integração com Supabase.
+
+## Skills
+- Cadastro de habilidades;
+- Exibição de competências;
+- Organização de informações dos usuários.
+
+## Navegação
+- Navegação por abas;
+- Rotas protegidas;
+- Estrutura modular utilizando Expo Router.
+
+## Interface
+- Layout responsivo;
+- Componentização;
+- Organização por telas e estilos separados.
+
+---
+
+# Estrutura do Projeto
 
 ```bash
-npm run reset-project
+connect-skills/
+│
+├── src/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── login.tsx
+│   │   │   ├── register.tsx
+│   │   │   └── skills.tsx
+│   │   │
+│   │   ├── (tabs)/
+│   │   │   ├── index.tsx
+│   │   │   └── _layout.tsx
+│   │   │
+│   │   ├── components/
+│   │   ├── home/
+│   │   ├── login/
+│   │   ├── register/
+│   │   └── skills/
+│   │
+│   ├── constants/
+│   ├── contexts/
+│   │   └── authContext.tsx
+│   │
+│   ├── lib/
+│   │   └── supabase.ts
+│   │
+│   └── assets/
+│       └── images/
+│
+├── app.json
+├── global.d.ts
+├── eslint.config.js
+└── README.md
+````
+
+---
+
+# Como Executar o Projeto
+
+## Pré-requisitos
+
+* Node.js instalado;
+* Expo CLI;
+* Conta no Supabase.
+
+---
+
+## Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/connect-skills.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Acesse a pasta do projeto:
 
-## Learn more
+```bash
+cd connect-skills
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Instale as dependências:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm install
+```
 
-## Join the community
+Execute o projeto:
 
-Join our community of developers creating universal apps.
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+# Configuração do Supabase
+
+Crie um arquivo `.env` para armazenar as credenciais do Supabase:
+
+```env
+EXPO_PUBLIC_SUPABASE_URL=sua_url
+EXPO_PUBLIC_SUPABASE_ANON_KEY=sua_chave
+```
+
+---
+
+# Melhorias Futuras
+
+* Perfil completo de usuário;
+* Upload de foto;
+* Sistema de mensagens;
+* Feed de publicações;
+* Pesquisa de usuários;
+* Sistema de conexões;
+* Dark mode;
+* Notificações em tempo real.
+
+---
+
+# Autor
+
+Projeto desenvolvido para fins acadêmicos e aprendizado em desenvolvimento mobile.
+
+---
+
+# Licença
+
+Este projeto está disponível para estudos e fins educacionais.
